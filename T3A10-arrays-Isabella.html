@@ -1,0 +1,45 @@
+<script>
+let myArray = new Array(20)
+myArray[0] = 'John'
+myArray[1] = 'inputtext'
+myArray[2] = ' Mary'
+myArray[3] = ' Jack'
+myArray[4] = ' Bob'
+myArray[5] = ' Jerry'
+myArray[6] = ' Ben'
+myArray[7] = ' Linda'
+myArray[8] = ' Bell'
+myArray[9] = ' Ash'
+myArray[10] = ' Felix'
+myArray[11] = ' Lillie'
+myArray[12] = ' Jessie'
+myArray[13] = ' James'
+myArray[14] = ' Serena'
+myArray[15] = ' Zack'
+myArray[16] = ' Barret'
+myArray[17] = ' May'
+myArray[18] = ' Hilda'
+myArray[19] = ' Ethan'
+myArray[20] = ' Barry'
+var inputtext = document.getElementById('myText01').value
+</script>
+
+<h1 align=center>T3A10-Arrays-Isabella.html</h1>
+
+<input id="myText01" type=text value="Fred"><br>
+<input id="myText02" type=text value="Mary"><br>
+<input id="myText03" type=text value="Jack"><br>
+
+<input type="button" value="Array Set" onclick="{
+
+  document.getElementById('myDiv01').innerHTML = '<br>myText01 = '+ document.getElementById('myText01').value      
+
+}">
+
+<input type="button" value="Array Show" onclick="{
+  for(let myLoop=0; myLoop<=3; myLoop++){
+  document.getElementById('myDiv01').innerHTML ='myArray[0] = ' + myArray[0] + ' myArray[1] = ' + myArray[1] + ' myArray[2] = ' + myArray[2] + ' myArray[3] = ' + myArray[3]
+}
+}"><br>
+
+<div id="myDiv01">...</div>
