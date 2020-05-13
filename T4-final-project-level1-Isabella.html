@@ -10,7 +10,6 @@
    let myShooting = 1
    let myTimer02
    let myTimer03
-   let myTimer04
 
    // global functions here
 function myHitOther(my1,my2){
@@ -92,7 +91,7 @@ function myCheckHit(){
 <body id="myBody" onLoad="{
 
 clearInterval(myTimer03)
-    myTimer02 = setInterval(function(){
+    myTimer03 = setInterval(function(){
        my02x = Math.floor((Math.random() * 20) - 9)
        my02y = Math.floor((Math.random() * 20) - 9)
        document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) + my02x + 'px'
@@ -100,16 +99,7 @@ clearInterval(myTimer03)
        myCheckHit()   //checks for all collisions
     }, 50)
 
-clearInterval(myTimer04)
-    myTimer02 = setInterval(function(){
-       my02x = Math.floor((Math.random() * 20) - 9)
-       my02y = Math.floor((Math.random() * 20) - 9)
-       document.getElementById('myImg04').style.left = parseInt(document.getElementById('myImg04').style.left) + my02x + 'px'
-       document.getElementById('myImg04').style.top = parseInt(document.getElementById('myImg04').style.top) + my02y + 'px'
-       myCheckHit()   //checks for all collisions
-    }, 50)
-
-clearInterval(myTimer04)
+clearInterval(myTimer02)
     myTimer02 = setInterval(function(){
        my02x = Math.floor((Math.random() * 20) - 9)
        my02y = Math.floor((Math.random() * 20) - 9)
@@ -220,11 +210,9 @@ if (myShooting == 1){
 <img id="myImg01" src="myImgNew.png"  style="position:absolute; width:100px; height:137px; left: 10px; top:190px;">
 <img id="myImg02" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:350px; top:190px;">
 <img id="myImg03" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:500px; top:190px;">
-<img id="myImg04" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:500px; top:400px;">
+<img id="myImg04" src="DoorSprite.png"  style="position:absolute; width:100px; height:162px; left:500px; top:400px;">
 
 
 <img id="myBullet01" src="myImgNew.jpg"  style="position:absolute; width:10px; height:10px; left: 130px; top:190px;">
 <img id="myBullet02" src="myImgNew.jpg"  style="position:absolute; width:10px; height:10px; left: 150px; top:190px;">
-
-
 
