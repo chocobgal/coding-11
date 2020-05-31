@@ -44,7 +44,7 @@ function myCheckHit(){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit the MT'  
       myScore -= 1
-   }   
+   } 
 
    if ( myHitOther('myBullet01','myImg03') ){
       clearInterval(myGun01)
@@ -52,7 +52,7 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg03').style.display = 'none';
-      document.getElementById('myImg03').style.left = '3000px'
+      document.getElementById('myImg03').style.left = '-3000px'
    }   
     
    if ( myHitOther('myBullet01','myImg02') ){
@@ -61,7 +61,7 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg02').style.display = 'none';
-      document.getElementById('myImg02').style.left = '3000px'
+      document.getElementById('myImg02').style.left = '-3000px'
    }   
    
    if ( myHitOther('myBullet02','myImg03') ){
@@ -70,7 +70,7 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg03').style.display = 'none';
-      document.getElementById('myImg03').style.left = '3000px'
+      document.getElementById('myImg03').style.left = '-3000px'
    } 
     
    if ( myHitOther('myBullet02','myImg02') ){
@@ -79,7 +79,7 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg02').style.display = 'none';
-      document.getElementById('myImg02').style.left = '3000px'
+      document.getElementById('myImg02').style.left = '-3000px'
    } 
    
 
@@ -87,7 +87,7 @@ function myCheckHit(){
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose score at zero!'  
-    alert('Sorry you lose')
+    //alert('Sorry you lose')
     location.reload()
    }
 
@@ -273,5 +273,5 @@ if (myShooting == 1){
 <img id="myImg04" src="Pryna.png"  style="position:absolute; width:100px; height:109px; left:700px; top:400px;">
 
 
-<img id="myBullet01" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: 500px; top:20px;">
-<img id="myBullet02" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: 480px; top:20px;">
+<img id="myBullet01" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: -200px; top:20px;">
+<img id="myBullet02" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: -200px; top:20px;">

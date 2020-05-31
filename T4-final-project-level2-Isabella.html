@@ -10,6 +10,8 @@
    let myShooting = 1
    let myTimer02
    let myTimer03
+   let myTimer05
+   let myTimer06
 
    // global functions here
 function myHitOther(my1,my2){
@@ -31,7 +33,7 @@ function myHitOther(my1,my2){
 
 
 function myCheckHit(){
-   document.all.myText01.value = myScore  // show the present score
+   document.all.myText01.value = myScore + ' You must shoot the boss multiple times to win.'  // show the present score
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
@@ -44,15 +46,46 @@ function myCheckHit(){
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit the MT'  
       myScore -= 1
-   }   
-
+   } 
+   if ( myHitOther('myImg01','myImg05') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit the MT'  
+      myScore -= 1
+   } 
+   if ( myHitOther('myImg01','myImg06') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit the MT'  
+      myScore -= 1
+   } 
+   if ( myHitOther('myImg01','myImg07') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit the MT'  
+      myScore -= 1
+   } 
+   if ( myHitOther('myImg01','myImg08') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit the MT'  
+      myScore -= 1
+   } 
+   if ( myHitOther('myImg01','myImg09') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+      document.all.myText01.value = 'You hit the MT'  
+      myScore -= 1
+   } 
+   
+    
    if ( myHitOther('myBullet01','myImg03') ){
       clearInterval(myGun01)
       document.getElementById('myBullet01').style.left = '-200px'
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg03').style.display = 'none';
-      document.getElementById('myImg03').style.left = '3000px'
+      document.getElementById('myImg03').style.left = '-3000px'
    }   
     
    if ( myHitOther('myBullet01','myImg02') ){
@@ -61,8 +94,96 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg02').style.display = 'none';
-      document.getElementById('myImg02').style.left = '3000px'
+      document.getElementById('myImg02').style.left = '-3000px'
    }   
+    
+   if ( myHitOther('myBullet01','myImg05') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg05').style.display = 'none';
+      document.getElementById('myImg05').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet01','myImg06') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg06').style.display = 'none';
+      document.getElementById('myImg06').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet01','myImg07') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg07').style.display = 'none';
+      document.getElementById('myImg07').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet01','myImg08') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg08').style.display = 'none';
+      document.getElementById('myImg08').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet01','myImg09') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg09').style.display = 'none';
+      document.getElementById('myImg09').style.left = '-3000px'
+   } 
+    
+    //boss fight bullet 1
+    
+   if ( myHitOther('myBullet01','myBoss01') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss01').style.visibility = 'hidden';
+      document.getElementById('myBoss01').style.left = '-3000px'
+      document.getElementById('myBoss01').style.top = '-2000px'
+      document.getElementById('myBoss02').style.visibility = 'visible';
+      document.getElementById('myBoss02').style.left = '930px'
+      document.getElementById('myBoss02').style.top = '160px'
+   } 
+    
+   if ( myHitOther('myBullet01','myBoss02') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss02').style.visibility = 'hidden';
+      document.getElementById('myBoss02').style.left = '-3000px'
+      document.getElementById('myBoss02').style.top = '-2000px'
+      document.getElementById('myBoss03').style.visibility = 'visible';
+      document.getElementById('myBoss03').style.left = '930px'
+      document.getElementById('myBoss03').style.top = '160px'
+   } 
+    
+   if ( myHitOther('myBullet01','myBoss03') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss03').style.visibility = 'hidden';
+      document.getElementById('myBoss03').style.left = '-3000px'
+      document.getElementById('myBoss03').style.top = '-2000px'
+      document.getElementById('myImg04').style.visibility = 'visible';
+      document.getElementById('myImg04').style.left = '1000px'
+      document.getElementById('myImg04').style.top = '260px'
+   } 
+    
+    //boss fight bullet 1 end
    
    if ( myHitOther('myBullet02','myImg03') ){
       clearInterval(myGun02)
@@ -70,7 +191,7 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg03').style.display = 'none';
-      document.getElementById('myImg03').style.left = '3000px'
+      document.getElementById('myImg03').style.left = '-3000px'
    } 
     
    if ( myHitOther('myBullet02','myImg02') ){
@@ -79,24 +200,113 @@ function myCheckHit(){
       document.all.myText01.value = 'You shot the MT!'  
       myScore += 1
       document.getElementById('myImg02').style.display = 'none';
-      document.getElementById('myImg02').style.left = '3000px'
+      document.getElementById('myImg02').style.left = '-3000px'
    } 
-   
+    
+   if ( myHitOther('myBullet02','myImg05') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg05').style.display = 'none';
+      document.getElementById('myImg05').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet02','myImg06') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg06').style.display = 'none';
+      document.getElementById('myImg06').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet02','myImg07') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg07').style.display = 'none';
+      document.getElementById('myImg07').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet02','myImg08') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg08').style.display = 'none';
+      document.getElementById('myImg08').style.left = '-3000px'
+   } 
+    
+   if ( myHitOther('myBullet02','myImg09') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot the MT!'  
+      myScore += 1
+      document.getElementById('myImg09').style.display = 'none';
+      document.getElementById('myImg09').style.left = '-3000px'
+   } 
+    
+        //boss fight bullet 2
 
+   if ( myHitOther('myBullet02','myBoss01') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss01').style.visibility = 'hidden';
+      document.getElementById('myBoss01').style.left = '-3000px'
+      document.getElementById('myBoss01').style.top = '-2000px'
+      document.getElementById('myBoss02').style.visibility = 'visible';
+      document.getElementById('myBoss02').style.left = '930px'
+      document.getElementById('myBoss02').style.top = '160px'
+   } 
+    
+   if ( myHitOther('myBullet02','myBoss02') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss02').style.visibility = 'hidden';
+      document.getElementById('myBoss02').style.left = '-3000px'
+      document.getElementById('myBoss02').style.top = '-2000px'
+      document.getElementById('myBoss03').style.visibility = 'visible';
+      document.getElementById('myBoss03').style.left = '930px'
+      document.getElementById('myBoss03').style.top = '160px'
+   } 
+    
+   if ( myHitOther('myBullet02','myBoss03') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot Immortalis!'  
+      myScore += 1
+      document.getElementById('myBoss03').style.visibility = 'hidden';
+      document.getElementById('myBoss03').style.left = '-3000px'
+      document.getElementById('myBoss03').style.top = '-2000px'
+      document.getElementById('myImg04').style.visibility = 'visible';
+      document.getElementById('myImg04').style.left = '1000px'
+      document.getElementById('myImg04').style.top = '260px'
+   } 
+    
+    
+    //boss fight bullet 2 end
+    
    
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose score at zero!'  
-    alert('Sorry you lose')
+    //alert('Sorry you lose')
     location.reload()
    }
 
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg04') ){
-      document.all.myText01.value = 'You beat the game!'  
-       alert('You Win the game, congratulations!')
+      document.all.myText01.value = 'You reached the snowmobile and escaped the facility! Congrats, you beat the game!'  
+       alert('You reached the snowmobile and escaped the facility! Congrats, you beat the game!')
       document.getElementById('myImg01').style.left = '20px'
+      location = 'T4-final-project-winscreen-Isabella.html'
    }
 
    // more if statements here
@@ -128,8 +338,26 @@ clearInterval(myTimer02)
        document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + my02y + 'px'
        myCheckHit()   //checks for all collisions
     }, 50)
+                          
+clearInterval(myTimer05)
+    myTimer05 = setInterval(function(){
+       my02x = Math.floor((Math.random() * 20) - 9)
+       my02y = Math.floor((Math.random() * 20) - 9)
+       document.getElementById('myImg05').style.left = parseInt(document.getElementById('myImg05').style.left) + my02x + 'px'
+       document.getElementById('myImg05').style.top = parseInt(document.getElementById('myImg05').style.top) + my02y + 'px'
+       myCheckHit()   //checks for all collisions
+    }, 50)
+                          
+clearInterval(myTimer06)
+    myTimer06 = setInterval(function(){
+       my02x = Math.floor((Math.random() * 20) - 9)
+       my02y = Math.floor((Math.random() * 20) - 9)
+       document.getElementById('myImg06').style.left = parseInt(document.getElementById('myImg06').style.left) + my02x + 'px'
+       document.getElementById('myImg06').style.top = parseInt(document.getElementById('myImg06').style.top) + my02y + 'px'
+       myCheckHit()   //checks for all collisions
+    }, 50)
 
-}" style="background-repeat:repeat; background-size: 110%" background="myBackground01.jpg"  onkeydown="{
+}" style="background-repeat:repeat; background-size: 70%" background="myBackground02.jpg"  onkeydown="{
 
    document.all.myText01.value = event.key
 
@@ -267,10 +495,22 @@ if (myShooting == 1){
 
 
 <img id="myImg01" src="myImgNew.png"  style="position:absolute; width:100px; height:137px; left: 10px; top:190px;">
-<img id="myImg02" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:350px; top:190px;">
-<img id="myImg03" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:500px; top:320px;">
-<img id="myImg04" src="Pryna.png"  style="position:absolute; width:100px; height:109px; left:700px; top:400px;">
+    
+<img id="myImg02" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:430px; top:110px;">
+<img id="myImg03" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:600px; top:240px;">
+<img id="myImg05" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:200px; top:160px;">
+<img id="myImg06" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:250px; top:320px;">   
+    
+<img id="myImg07" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:900px; top:50px;">   
+<img id="myImg08" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:800px; top:200px;">   
+<img id="myImg09" src="MTSprite.png"  style="position:absolute; width:100px; height:137px; left:900px; top:350px;">   
+    
+<img id="myImg04" src="Snowmobile.png"  style="position:absolute; width:100px; height:50px; left:-3000px; top:-2000px; visibility:hidden;">
+  
+<img id="myBoss01" src="WormVerstael.png"  style="position:absolute; width:400px; height:225px; left:930px; top:160px;">
+<img id="myBoss02" src="WormVerstael.png"  style="position:absolute; width:400px; height:225px; left:-3000px; top:-2000px; visibility:hidden;">
+<img id="myBoss03" src="WormVerstael.png"  style="position:absolute; width:400px; height:225px; left:-3000px; top:-2000px; visibility:hidden;">
+<img id="myBoss04" src="WormVerstael.png"  style="position:absolute; width:400px; height:225px; left:-3000px; top:-2000px; visibility:hidden;">
 
-
-<img id="myBullet01" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: 500px; top:20px;">
-<img id="myBullet02" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: 480px; top:20px;">
+<img id="myBullet01" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: -200px; top:20px;">
+<img id="myBullet02" src="bullet.png"  style="position:absolute; width:50px; height:50px; left: -200px; top:20px;">
